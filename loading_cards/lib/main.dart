@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -23,7 +22,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text("Loading Cards!"),
@@ -35,15 +33,16 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Shimmer(
               color: Colors.black,
-                child: Card(
-              color: Colors.grey.shade300,
-              margin: EdgeInsets.all(0),
-              child: Container(
-                constraints: BoxConstraints(
-                    minHeight: 200,
-                    minWidth: MediaQuery.of(context).size.width * 0.9),
+              child: Card(
+                color: Colors.grey.shade300,
+                margin: EdgeInsets.all(0),
+                child: Container(
+                  constraints: BoxConstraints(
+                      minHeight: 200,
+                      minWidth: MediaQuery.of(context).size.width * 0.9),
+                ),
               ),
-            ),),
+            ),
             Shimmer(
               color: Colors.black,
               child: Card(
@@ -54,7 +53,8 @@ class MyHomePage extends StatelessWidget {
                       minHeight: 200,
                       minWidth: MediaQuery.of(context).size.width * 0.9),
                 ),
-              ),),
+              ),
+            ),
             Shimmer(
               color: Colors.black,
               child: Card(
@@ -65,7 +65,8 @@ class MyHomePage extends StatelessWidget {
                       minHeight: 200,
                       minWidth: MediaQuery.of(context).size.width * 0.9),
                 ),
-              ),),
+              ),
+            ),
           ],
         ),
       ),
